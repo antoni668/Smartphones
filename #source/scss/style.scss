@@ -1,0 +1,153 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+@font-face {
+	font-family: "MyriadPro";
+	src: url("../fonts/Myriad-Pro31655.eot"); /* IE9 Compat Modes */
+	src: url("../fonts/Myriad-Pro31655.eot?#iefix") format("embedded-opentype"),
+		/* IE6-IE8 */ url("../fonts/Myriad-Pro31655.otf") format("opentype"),
+		/* Open Type Font */ url("../fonts/Myriad-Pro31655.svg") format("svg"),
+		/* Legacy iOS */ url("../fonts/Myriad-Pro31655.ttf") format("truetype"),
+		/* Safari, Android, iOS */ url("../fonts/Myriad-Pro31655.woff") format("woff"),
+		/* Modern Browsers */ url("../fonts/Myriad-Pro31655.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "MyriadPro";
+	src: url("../fonts/Myriad-Pro-Light31642.eot"); /* IE9 Compat Modes */
+	src: url("../fonts/Myriad-Pro-Light31642.eot?#iefix") format("embedded-opentype"),
+		/* IE6-IE8 */ url("../fonts/Myriad-Pro-Light31642.otf") format("opentype"),
+		/* Open Type Font */ url("../fonts/Myriad-Pro-Light31642.svg") format("svg"),
+		/* Legacy iOS */ url("../fonts/Myriad-Pro-Light31642.ttf") format("truetype"),
+		/* Safari, Android, iOS */ url("../fonts/Myriad-Pro-Light31642.woff") format("woff"),
+		/* Modern Browsers */ url("../fonts/Myriad-Pro-Light31642.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "HelveticaNeue";
+	src: url("../fonts/HelveticaNeue.eot"); /* IE9 Compat Modes */
+	src: url("../fonts/HelveticaNeue.eot?#iefix") format("embedded-opentype"),
+		/* IE6-IE8 */ url("../fonts/HelveticaNeue.otf") format("opentype"),
+		/* Open Type Font */ url("../fonts/HelveticaNeue.svg") format("svg"),
+		/* Legacy iOS */ url("../fonts/HelveticaNeue.ttf") format("truetype"),
+		/* Safari, Android, iOS */ url("../fonts/HelveticaNeue.woff") format("woff"),
+		/* Modern Browsers */ url("../fonts/HelveticaNeue.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "LucidaGrande";
+	src: url("../fonts/LucidaGrande.eot"); /* IE9 Compat Modes */
+	src: url("../fonts/LucidaGrande.eot?#iefix") format("embedded-opentype"),
+		/* IE6-IE8 */ url("../fonts/LucidaGrande.otf") format("opentype"),
+		/* Open Type Font */ url("../fonts/LucidaGrande.svg") format("svg"),
+		/* Legacy iOS */ url("../fonts/LucidaGrande.ttf") format("truetype"),
+		/* Safari, Android, iOS */ url("../fonts/LucidaGrande.woff") format("woff"),
+		/* Modern Browsers */ url("../fonts/LucidaGrande.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+//<Подключаем шрифты>=======================================================================================
+
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "";
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 936;
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+body {
+	color: #000;
+	font-size: 14px;
+	&.lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	&.loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms.scss";
+@import "ui.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "../../js/fancybox/jquery.fancybox.scss";
+//@import "datepicker.scss";
+//@import "fontawesome.scss";
+//@import "popover.min.scss";
+//@import "baguetteBox.scss";
+//@import "pagging.scss";
+//@import "icons.scss";
+@import "popup.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "home.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+
+//====================================================================================================
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+.mainblock {
+	// .mainblock__charger
+	&__charger {
+		font-size: 50px;
+		color: red;
+	}
+	// .mainblock__no-problem
+	&__no-problem {}
+	// .mainblock__image
+	&__image {}
+}
+.container {
+}
